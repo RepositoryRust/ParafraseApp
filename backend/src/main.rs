@@ -25,7 +25,7 @@ mod test_get_providers;
 async fn main() {
     dotenv::dotenv().ok();
 
-    let origin = env::var("ALLOWED_ORIGIN").unwrap_or_else(|_| "http://localhost:3000".into());
+    let origin = env::var("ALLOWED_ORIGIN").unwrap_or_else(|_| "http://localhost:5173".into());
 
     let cors = CorsLayer::new()
         .allow_origin(origin.parse::<HeaderValue>().unwrap())
@@ -40,8 +40,8 @@ async fn main() {
     let state = AppState { client };
 
     let app = Router::new()
-        .route("/chat", post(get_chat))
-        .route("/providers", post(get_providers))
+        .route("/api/chat", post(get_chat))
+        .route("/api/providers", post(get_providers))
         .layer(cors)
         .with_state(state);
 
