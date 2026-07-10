@@ -54,7 +54,7 @@ export function OutputSection({
   );
 
   return (
-    <section className="mx-auto w-[60%] max-w-3xl mb-5">
+    <section className="mx-auto mb-5 w-full max-w-3xl lg:w-[60%]">
       <Card>
         <CardHeader>
           <div className="flex items-center justify-between">
@@ -62,7 +62,7 @@ export function OutputSection({
               <CardTitle className="text-sm font-medium">
                 {providerLabel}
               </CardTitle>
-              <div className="flex items-center gap-1.5">
+              <div className="flex flex-wrap items-center gap-1.5">
                 <Badge variant="secondary" className="text-[0.6rem]">
                   {modelVersion}
                 </Badge>
@@ -113,7 +113,7 @@ export function OutputSection({
           ) : (
             <div
               className="min-h-20 max-h-75 overflow-y-auto whitespace-pre-wrap break-words text-sm leading-relaxed text-foreground/90
-              [&::-webkit-scrollbar]:w-1.5 text-justify pr-5
+              [&::-webkit-scrollbar]:w-1.5 text-justify sm:pr-5
               [&::-webkit-scrollbar-track]:bg-transparent
               [&::-webkit-scrollbar-thumb]:rounded-full
               [&::-webkit-scrollbar-thumb]:bg-input
@@ -139,7 +139,7 @@ export function OutputSection({
         {phase === "done" && (
           <CardFooter>
             <div className="flex w-full items-center justify-between">
-              <div className="flex items-center gap-3 text-[0.65rem] text-muted-foreground">
+              <div className="flex items-center gap-3 text-[0.7rem] text-muted-foreground sm:text-[0.65rem]">
                 <span>{wordCount} kata</span>
                 <span>{charCount} karakter</span>
               </div>

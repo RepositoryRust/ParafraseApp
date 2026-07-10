@@ -85,16 +85,12 @@ export function ApiKeyDialog({
             )}
 
             <div className="flex">
-              <Button
-                className="w-[15%]"
-                disabled={!keyInput.trim()}
-                onClick={onSave}
-              >
+              <Button disabled={!keyInput.trim()} onClick={onSave}>
                 Save
               </Button>
               <Button
                 variant="destructive"
-                className="w-[15%] ml-auto"
+                className="ml-auto"
                 disabled={!hasApiKey}
                 onClick={onReset}
               >

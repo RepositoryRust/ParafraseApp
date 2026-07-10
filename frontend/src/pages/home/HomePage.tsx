@@ -243,17 +243,17 @@ export default function HomePage() {
       <main className="relative isolate min-h-screen overflow-hidden bg-background">
         {/* Background blobs */}
         <div aria-hidden className="pointer-events-none absolute inset-0 z-0">
-          <div className="absolute left-1/2 -top-40 size-96 -translate-x-1/2 rounded-full bg-primary/25 blur-3xl sm:-top-44 sm:size-112 lg:-top-48 lg:size-144" />
-          <div className="absolute -right-28 top-1/3 size-64 rounded-full bg-secondary/40 blur-3xl sm:-right-24 sm:size-72 lg:size-80" />
+          <div className="absolute left-1/2 -top-20 size-64 -translate-x-1/2 rounded-full bg-primary/25 blur-3xl sm:-top-44 sm:size-112 lg:-top-48 lg:size-144" />
+          <div className="absolute -right-12 top-1/3 size-48 rounded-full bg-secondary/40 blur-3xl sm:-right-24 sm:size-72 lg:size-80" />
         </div>
 
-        <div className="relative z-10 mx-auto mt-5 flex w-full max-w-6xl flex-col gap-5 px-4 pt-4">
+        <div className="relative z-10 mx-auto mt-3 flex w-full max-w-6xl flex-col gap-4 px-4 pt-2 sm:mt-5 sm:gap-5 sm:pt-4">
           {/* ── Input Section ────────────────────────────── */}
           <section className="flex flex-col items-center gap-3 text-center">
             <h1 className="font-heading text-[1.72rem] leading-tight tracking-tight sm:text-4xl">
               Parafrase teks AI
               <br className="hidden sm:inline" />
-              menjadi lebih natural
+              {" "}menjadi lebih natural
             </h1>
 
             <p className="max-w-3xl text-sm text-muted-foreground">
@@ -261,7 +261,7 @@ export default function HomePage() {
               hasil AI.
             </p>
 
-            <Field className="mt-10 w-[60%] max-w-3xl">
+            <Field className="mt-6 w-full max-w-3xl sm:mt-10 lg:w-[60%]">
               <InputGroup>
                 <InputGroupTextarea
                   ref={inputRef}
@@ -301,7 +301,7 @@ export default function HomePage() {
               </InputGroup>
 
               {/* Bottom bar */}
-              <div className="flex items-center gap-2">
+              <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
                 <Select
                   value={selectedProvider}
                   onValueChange={(value) =>
